@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: campusfinder-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn api:app --bind 0.0.0.0:$PORT
